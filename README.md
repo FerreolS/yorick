@@ -222,3 +222,9 @@ Other make targets include:
 
 There are many more build targets and make macros.  Read the comments
 in Makefile and Makepkg for more information.
+
+Installation via Docker 
+-------------------
+Simply run 
+`docker run -v $(pwd):/home/yorick -ti ferreol/yorick`
+To run yorick in the folder `FOLDER` replace `$(pwd)` by `FOLDER`
