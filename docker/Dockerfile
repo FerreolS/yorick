@@ -12,14 +12,14 @@ RUN echo http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories 
     ln -s /opt/yorick/bin/yorick /usr/local/bin/yorick &&\
     rm -rf /opt/yorick-master &&\
     apk del --virtual .build-deps && \
-    rm -rf /var/cache/apk/* && \
+    rm -rf /var/cache/apk/* /opt/yorick/doc && \
     touch /opt/yorick/yorick.commands
    
 
 WORKDIR /home/yorick
 
 # sleep 0.1; is a workaround for tty size bug (see https://github.com/moby/moby/issues/28009)
-ENTRYPOINT   sleep 0.1;rlwrap -s 2000 -c -f /opt/yorick/yorick.commands yorick
+ENTRYPOINT   sleep 0.1;rlwrap -pBLUE -s 2000 -c -f /opt/yorick/yorick.commands yorick
 
 
 
