@@ -12,7 +12,7 @@ RUN echo http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories 
     ln -s /opt/yorick/bin/yorick /usr/local/bin/yorick &&\
     rm -rf /opt/yorick-master &&\
     apk del --virtual .build-deps && \
-    rm -rf /var/cache/apk/* /opt/yorick/doc && \
+    rm -rf /var/cache/apk/* /opt/yorick/doc/* && \
     touch /opt/yorick/yorick.commands
    
 
