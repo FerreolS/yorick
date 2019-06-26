@@ -11,7 +11,7 @@ RUN echo http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories 
     make install NO_XLIB=yes COPT_DEFAULT=-O2 && mv relocate /opt/yorick && \
     ln -s /opt/yorick/bin/yorick /usr/local/bin/yorick &&\
     rm -rf /opt/yorick-master &&\
-    apk del --virtual .build-deps && \
+    apk del .build-deps && \
     rm -rf /var/cache/apk/* /opt/yorick/doc/* && \
     touch /opt/yorick/yorick.commands
    
